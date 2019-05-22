@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-            <h5 class="display-5 con3">
+            <h5 class="display-5 com3">
                 (Office Ph) 928-450-2234<br />
                 (Leasing Ph) 928-450-2235<br />
                 (Fax) 928-450-2236<br />

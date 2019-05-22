@@ -21,7 +21,7 @@
         <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 p-3">
                 <h2 class="display-5 con2">Located on the south shore Inland Lake, just a small commute from major centers in the south west</h2>
-                <p class="lead con3">
+                <p class="lead co3">
                     Inland Marina was established in the 1967 shortly after Inland Lake was created as a result of the South West damn. From its humble beginnings, it has grown to be the largest marina on Inland Lake. Due to the warm climate that extends year-round, Inland Lake has become a popular tourist destination in the south west. Boat owners from California, Arizona, Nevada, and Utah are attracted to the area. Inland Marina has 90 slips ranging in size from 16 to 32 feet in length. Dock services include electrical and fresh water.
                 </p>
             </div>

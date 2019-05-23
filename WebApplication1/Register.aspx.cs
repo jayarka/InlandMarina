@@ -24,13 +24,13 @@ namespace WebApplication1
 
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("insert into Registration values (@FirstName, @LastName, @PhoneNumber, @City, @Username, @Password)", con);
+            SqlCommand cmd = new SqlCommand("insert into Customer values (@FirstName, @LastName, @PhoneNumber, @City, @Email, @Password)", con);
 
             cmd.Parameters.AddWithValue("FirstName", TextBox1.Text);
             cmd.Parameters.AddWithValue("LastName", TextBox2.Text);
             cmd.Parameters.AddWithValue("PhoneNumber", TextBox3.Text);
             cmd.Parameters.AddWithValue("City", TextBox4.Text);
-            cmd.Parameters.AddWithValue("Username", TextBox5.Text);
+            cmd.Parameters.AddWithValue("Email", TextBox5.Text);
             cmd.Parameters.AddWithValue("Password", TextBox6.Text);
 
             cmd.ExecuteNonQuery();

@@ -2,9 +2,9 @@
 
 <asp:content id="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
-        <div class="row">
+        <div class="row justify-content-center">
             
-            <div class="card" style="width: 18rem;">
+            <div class="card mr-5" style="width: 18rem;">
   <h5 class="card-header text-center">Dock A</h5>
                 <img src="images/marina.jpg" class="card-img-top" alt="..." />
   <div class="card-body">
@@ -16,7 +16,7 @@ FROM Slip WHERE DockID = 1 AND NOT EXISTS(SELECT 'x' FROM Lease WHERE Lease.Slip
   </div>
 </div>
             
-            <div class="card" style="width: 18rem;">
+            <div class="card mr-5" style="width: 18rem;">
   <h5 class="card-header text-center">Dock B</h5>
                 <img src="images/marina.jpg" class="card-img-top" alt="..." />
   <div class="card-body">
@@ -28,7 +28,7 @@ FROM Slip WHERE DockID = 2 AND NOT EXISTS(SELECT 'x' FROM Lease WHERE Lease.Slip
   </div>
 </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card mr-5" style="width: 18rem;">
   <h5 class="card-header text-center">Dock C</h5>
                 <img src="images/marina.jpg" class="card-img-top" alt="..." />
   <div class="card-body">
@@ -36,7 +36,7 @@ FROM Slip WHERE DockID = 2 AND NOT EXISTS(SELECT 'x' FROM Lease WHERE Lease.Slip
       <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Marina(localDB) %>" SelectCommand="SELECT ID, Width, Length, DockID, 'Slip ' + str(ID) + ' (' + str(Width) + ' x' + str(Length) + ' )' as 'ListText' 
 FROM Slip WHERE DockID = 3 AND NOT EXISTS(SELECT 'x' FROM Lease WHERE Lease.SlipID = Slip.ID)"></asp:SqlDataSource>
             <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource3" DataTextField="ListText" DataValueField="ID" >
-        </asp:DropDownList><asp:Button ID="Button3" runat="server" Text="Purchase Lease" />
+        </asp:DropDownList><asp:Button ID="Button3" runat="server" Text="Purchase Lease" OnClick="Button3_Click" />
   </div>
 </div>
 

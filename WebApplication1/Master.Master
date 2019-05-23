@@ -25,20 +25,18 @@
             <nav class="class1 site-header sticky-top py-1">
                 <div class="na rd-navbar-main-outer">
                     <div class="class2 navbar navbar-expand-lg">
-                        <div class="container d-flex flex-column flex-md-row justify-content-between">
-                            <a class="txt py-2 d-none d-md-inline-block" href="#">Home</a>
-                            <a class="txt py-2 d-none d-md-inline-block" href="#">Contact Us</a>
-                            <a class="txt py-2 d-none d-md-inline-block" href="#">Register Here</a>
-                            <a class="txt py-2 d-none d-md-inline-block" href="#">Available Slip</a>
+                        <div class="container d-flex flex-column flex-md-row justify-content-between">                           
+                            <a class="txt py-2 d-none d-md-inline-block" href="Home.aspx">Home</a>
+                            <a class="txt py-2 d-none d-md-inline-block" href="Contact.aspx">Contact Us</a>
+                            <a class="txt py-2 d-none d-md-inline-block" href="Register.aspx">Register Here</a>
+                            <a class="txt py-2 d-none d-md-inline-block" href="AvailableSlips.aspx">Available Slip</a>
                             <a class="txt py-2 d-none d-md-inline-block" href="#">Lease slip</a>
                             <a class="txt py-2 d-none d-md-inline-block" href="#">Login</a>
                             <div class="navbar-brand">
                                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/onlinelogomaker-052119-1507-9254-500.jpg" Height="97px" Width="220px" />
-                            </div>
+                            </div>                            
                         </div>
-
                     </div>
-
                 </div>
             </nav>
         </header>

@@ -36,17 +36,13 @@ namespace WebApplication1
             cmd.ExecuteNonQuery();
 
             Label1.Visible = true;
-
             Label1.Text = "User registered successfully";
 
 
 
             TextBox1.Text = "";
-
             TextBox2.Text = "";
-
             TextBox3.Text = "";
-
             TextBox4.Text = "";
             TextBox5.Text = "";
             TextBox6.Text = "";

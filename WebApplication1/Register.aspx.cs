@@ -13,5 +13,10 @@ namespace WebApplication1
         {
 
         }
+
+        protected void CreateUserWizard1_CreatedUser(object sender, EventArgs e)
+        {
+
+        }
     }
 }

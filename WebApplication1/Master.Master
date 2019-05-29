@@ -30,8 +30,18 @@
                             <a class="txt py-2 d-none d-md-inline-block" href="Contact.aspx">Contact Us</a>
                             <a class="txt py-2 d-none d-md-inline-block" href="Register.aspx">Register Here</a>
                             <a class="txt py-2 d-none d-md-inline-block" href="AvailableSlips.aspx">Available Slip</a>
-                            <a class="txt py-2 d-none d-md-inline-block" href="#">Lease slip</a>
-                            <a class="txt py-2 d-none d-md-inline-block" href="#">Login</a>
+                            <a id="leaseLink" runat="server" class="txt py-2 d-none d-md-inline-block" href="HeldLeases.aspx">Your Leases</a>
+
+                            <div class="form-inline" runat="server" id="loginDiv">
+                                <div class="col-auto">
+                                    <asp:TextBox id="txtLoginEmail" runat="server" CssClass="form-control form-control-sm" placeholder="Email"/>
+                                </div>
+                                <div class="col-auto">
+                                    <asp:TextBox id="txtLoginPassword" runat="server" CssClass="form-control form-control-sm" placeholder="Password" type="password"/>
+                                </div>
+
+                                <asp:Button ID="Button1" runat="server" Text="Submit"  CssClass="btn btn-primary mb-2" OnClick="Button1_Click"/>
+                            </div>
                             <div class="navbar-brand">
                                 <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/onlinelogomaker-052119-1507-9254-500.jpg" Height="97px" Width="220px" />
                             </div>                            

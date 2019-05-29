@@ -18,8 +18,10 @@ namespace WebApplication1
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-
-            System.Diagnostics.Debug.WriteLine(DropDownList3.SelectedValue);
+            if (Session["CustomerID"] == null)
+            {
+                Response.Redirect("Register.aspx");
+            }
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Marina(localDB)"].ConnectionString);
 
             con.Open();
@@ -27,9 +29,48 @@ namespace WebApplication1
             SqlCommand cmd = new SqlCommand("insert into Lease values (@SlipID, @CustomerID)", con);
 
             cmd.Parameters.AddWithValue("SlipID", DropDownList3.SelectedValue);
-            cmd.Parameters.AddWithValue("CustomerID", 4);
+            cmd.Parameters.AddWithValue("CustomerID", Convert.ToInt32(Session["CustomerID"]));
 
             cmd.ExecuteNonQuery();
+            Response.Redirect("HeldLeases.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (Session["CustomerID"] == null)
+            {
+                Response.Redirect("Register.aspx");
+            }
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Marina(localDB)"].ConnectionString);
+
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("insert into Lease values (@SlipID, @CustomerID)", con);
+
+            cmd.Parameters.AddWithValue("SlipID", DropDownList2.SelectedValue);
+            cmd.Parameters.AddWithValue("CustomerID", Convert.ToInt32(Session["CustomerID"]));
+
+            cmd.ExecuteNonQuery();
+            Response.Redirect("HeldLeases.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (Session["CustomerID"] == null)
+            {
+                Response.Redirect("Register.aspx");
+            }
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Marina(localDB)"].ConnectionString);
+
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("insert into Lease values (@SlipID, @CustomerID)", con);
+
+            cmd.Parameters.AddWithValue("SlipID", DropDownList1.SelectedValue);
+            cmd.Parameters.AddWithValue("CustomerID", Convert.ToInt32(Session["CustomerID"]));
+
+            cmd.ExecuteNonQuery();
+            Response.Redirect("HeldLeases.aspx");
         }
     }
 }

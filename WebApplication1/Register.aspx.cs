@@ -31,7 +31,7 @@ namespace WebApplication1
             cmd.Parameters.AddWithValue("PhoneNumber", TextBox3.Text);
             cmd.Parameters.AddWithValue("City", TextBox4.Text);
             cmd.Parameters.AddWithValue("Email", TextBox5.Text);
-            cmd.Parameters.AddWithValue("Password", TextBox6.Text);
+            cmd.Parameters.AddWithValue("Password", Encryption.Encrypt(TextBox6.Text));
 
             cmd.ExecuteNonQuery();
 
